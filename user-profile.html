@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+<body>
+    <div class="user-info">
+        <img id="avatar"></img>
+        <p id="first_name"></p>
+        <p id="last_name"></p>
+        <p id="title"></p>
+        <p id="email"></p>
+        <p id="phone_number"></p>
+        <p id="date_of_birth"></p>
+
+        <a target="_blank" id="location">
+            <div class ="address">
+                <p id="city"></p>
+                <p id="street_name"></p>
+                <p id="street_address"></p>
+                <p id="country"></p>
+            </div>
+        </a>
+    </div>
+</body>
+</html>
+
+<script>
+    var avatar = sessionStorage.getItem('avatar');
+    var first_name = sessionStorage.getItem('first_name');
+    var last_name = sessionStorage.getItem('last_name');
+    var title = sessionStorage.getItem('title');
+    var email = sessionStorage.getItem('email');
+    var phone_number = sessionStorage.getItem('phone_number');
+    var date_of_birth = sessionStorage.getItem('title');
+    var city = sessionStorage.getItem('city');
+    var street_name = sessionStorage.getItem('street_name');
+    var street_address = sessionStorage.getItem('street_address');
+    var country = sessionStorage.getItem('country');
+    document.getElementById('avatar').src = avatar;
+    document.getElementById('first_name').textContent = first_name;
+    document.getElementById('last_name').textContent = last_name;
+    document.getElementById('title').textContent = title;
+    document.getElementById('email').textContent = email;
+    document.getElementById('phone_number').textContent = phone_number;
+    document.getElementById('date_of_birth').textContent = date_of_birth;
+    document.getElementById('city').textContent = city;
+    document.getElementById('street_name').textContent = street_name;
+    document.getElementById('street_address').textContent = street_address;
+    document.getElementById('country').textContent = country;
+    document.getElementById('location').href = "https://maps.google.com?q="+street_address;
+
+
+
+
+
+</script>
+
+
